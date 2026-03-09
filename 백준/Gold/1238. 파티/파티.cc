@@ -19,7 +19,7 @@ int main() {
         reversed_edges[B].push_back({A, C});
     }
 
-    priority_queue<pair<int, int>> dijkstra;
+    priority_queue<pair<int,int>, vector<pair<int,int>>, greater<>> dijkstra;
     vector<int> distance_from_party(N+1, 1e9);
     distance_from_party[X] = 0;
     dijkstra.push({0, X});
